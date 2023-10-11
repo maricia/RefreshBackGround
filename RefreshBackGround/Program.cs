@@ -1,9 +1,28 @@
 using RefreshBackGround;
 
+internal static class Program { 
 
-HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
+    static void Main(string[] args)
+    {
+        MessageBox.Show("Main Method");
+        Items items = new Items();
+        items.Show();
+        StartService();
 
-builder.Services.AddHostedService<TimerService>();
+    }
+    private static void StartService()
+    {
+    HostApplicationBuilder builder = Host.CreateApplicationBuilder();
 
-IHost host = builder.Build();
-host.Run();
+    builder.Services.AddHostedService<TimerService>();
+
+    IHost host = builder.Build();
+    host.Run();
+
+    }
+
+    
+
+
+}
+ 
