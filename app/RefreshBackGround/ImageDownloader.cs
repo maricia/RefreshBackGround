@@ -10,7 +10,7 @@ namespace RefreshBackGround
     public class ImageDownloader
     {
 
-        private static string myPath = @"C:\BackGroundImage\10000x6000.jpg";
+        private static string myPath = @"E:\BackGroundImage\10000x6000.jpg";
 
         public static string imageLocation = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/CONUS/GEOCOLOR/10000x6000.jpg".Trim();
 
@@ -34,7 +34,7 @@ namespace RefreshBackGround
                         // response.EnsureSuccessStatusCode();
                         using (Stream stream = await response.Content.ReadAsStreamAsync())
                         {
-                            using (FileStream fileStream = new FileStream(@"C:\BackGroundImage\10000x6000.jpg", FileMode.Create, FileAccess.Write))
+                            using (FileStream fileStream = new FileStream(myPath, FileMode.Create, FileAccess.Write))
                             {
                                 stream.CopyTo(fileStream);
                             }

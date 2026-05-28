@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Diagnostics;
 
@@ -17,12 +16,12 @@ namespace RefreshBackGround
 {
     public partial class Items : Form
     {
-        private readonly string myPath = @"C:\BackGroundImage\10000x6000.jpg";
+        private readonly string myPath = @"E:\BackGroundImage\10000x6000.jpg";
         private readonly string imageLocation = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/CONUS/GEOCOLOR/10000x6000.jpg".Trim();
         public bool state = true;
         //icon.DoubleClick += nIcon_DoubleClick;
         //icon.Click += nIcon_DoubleClick;
-        public Items frm;
+        public Items? frm;
 
 
         public void fillinlabels()
@@ -74,7 +73,8 @@ namespace RefreshBackGround
             fillinlabels();
         }
 
-        private void Items_FormCloseing(object sender, FormClosingEventArgs e)
+        //private void Items_FormClosing(object sender, FormClosingEventArgs e)
+        private void Items_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you really want to exit?", "Dialog Title", MessageBoxButtons.YesNo);
             if (e.CloseReason == CloseReason.UserClosing)

@@ -79,7 +79,7 @@
             // image1
             // 
             image1.BackgroundImageLayout = ImageLayout.None;
-            image1.ImageLocation = "C:\\BackGroundImage\\10000x6000.jpg";
+            image1.ImageLocation = @"E:\BackGroundImage\10000x6000.jpg";
             image1.Location = new Point(550, 30);
             image1.Name = "image1";
             image1.Size = new Size(397, 237);
@@ -267,7 +267,8 @@
             Text = " ";
             TopMost = true;
             WindowState = FormWindowState.Minimized;
-            FormClosing += Items_FormCloseing;
+            FormClosing += Items_FormClosing;
+            //Items_FormCloseing;
             Load += Items_Load;
             ((System.ComponentModel.ISupportInitialize)image1).EndInit();
             myMenu.ResumeLayout(false);
