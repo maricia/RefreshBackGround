@@ -21,7 +21,7 @@ namespace RefreshBackGroundV3
             lblresolution4.Text = "10000 x 6000";  // CONUS / GeoColor
             lblresolution5.Text = "1000 x 1000";   // Gulf of America
 
-            rbGeoColor.Checked = true;
+            rbConusGeoColor.Checked = true;
 
             rbGeoColor.CheckedChanged += WallpaperSource_CheckedChanged;
             rbDust.CheckedChanged += WallpaperSource_CheckedChanged;
@@ -51,6 +51,7 @@ namespace RefreshBackGroundV3
             try
             {
 
+                btnDownloadNow.Text = " ☁ Download Now";
                 lblStatusIcon.Text = "⟳";
                 lblStatusIcon.ForeColor = Color.DodgerBlue;
                 lblStatus.Text = "Downloading...";
@@ -394,9 +395,9 @@ namespace RefreshBackGroundV3
 
         private void UpdateSelectedCard()
         {
-            Color selectedBorder = Color.DodgerBlue;
+            Color selectedBorder = Color.FromArgb(240, 246, 255);
             Color normalBorder = Color.LightGray;
-            Color selectedColor = Color.FromArgb(230, 243, 255);
+            Color selectedColor = Color.FromArgb(180, 210, 250);
             Color normalColor = SystemColors.Control;
 
             pnlGeoColor.BackColor =

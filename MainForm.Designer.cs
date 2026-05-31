@@ -105,11 +105,11 @@
             // 
             // picPreview
             // 
-            picPreview.BorderStyle = BorderStyle.FixedSingle;
+            picPreview.Enabled = false;
             picPreview.Location = new Point(9, 178);
             picPreview.Name = "picPreview";
             picPreview.Size = new Size(315, 145);
-            picPreview.SizeMode = PictureBoxSizeMode.Zoom;
+            picPreview.SizeMode = PictureBoxSizeMode.AutoSize;
             picPreview.TabIndex = 0;
             picPreview.TabStop = false;
             picPreview.Click += picPreview_Click;
@@ -128,9 +128,9 @@
             grpStatus.Controls.Add(lblResolutionValue);
             grpStatus.Controls.Add(lblFileNameValue);
             grpStatus.Controls.Add(lblLastDownload);
-            grpStatus.Location = new Point(12, 25);
+            grpStatus.Location = new Point(12, 42);
             grpStatus.Name = "grpStatus";
-            grpStatus.Size = new Size(365, 409);
+            grpStatus.Size = new Size(365, 388);
             grpStatus.TabIndex = 1;
             grpStatus.TabStop = false;
             grpStatus.Text = "Status";
@@ -207,7 +207,7 @@
             // 
             // btnDownloadNow
             // 
-            btnDownloadNow.Location = new Point(6, 359);
+            btnDownloadNow.Location = new Point(6, 335);
             btnDownloadNow.Name = "btnDownloadNow";
             btnDownloadNow.Size = new Size(170, 36);
             btnDownloadNow.TabIndex = 1;
@@ -273,7 +273,7 @@
             // lblLastDownloadValue
             // 
             lblLastDownloadValue.AutoSize = true;
-            lblLastDownloadValue.Location = new Point(198, 67);
+            lblLastDownloadValue.Location = new Point(198, 83);
             lblLastDownloadValue.Name = "lblLastDownloadValue";
             lblLastDownloadValue.Size = new Size(85, 15);
             lblLastDownloadValue.TabIndex = 1;
@@ -282,7 +282,7 @@
             // lblRefreshMinutes
             // 
             lblRefreshMinutes.AutoSize = true;
-            lblRefreshMinutes.Location = new Point(54, 67);
+            lblRefreshMinutes.Location = new Point(54, 83);
             lblRefreshMinutes.Name = "lblRefreshMinutes";
             lblRefreshMinutes.Size = new Size(92, 15);
             lblRefreshMinutes.TabIndex = 2;
@@ -291,7 +291,7 @@
             // numRefreshMinutes
             // 
             numRefreshMinutes.ImeMode = ImeMode.On;
-            numRefreshMinutes.Location = new Point(152, 65);
+            numRefreshMinutes.Location = new Point(152, 81);
             numRefreshMinutes.Name = "numRefreshMinutes";
             numRefreshMinutes.Size = new Size(40, 23);
             numRefreshMinutes.TabIndex = 0;
@@ -317,7 +317,7 @@
             // 
             // btnRestoreWallpaper
             // 
-            btnRestoreWallpaper.Location = new Point(163, 89);
+            btnRestoreWallpaper.Location = new Point(163, 112);
             btnRestoreWallpaper.Name = "btnRestoreWallpaper";
             btnRestoreWallpaper.Size = new Size(133, 33);
             btnRestoreWallpaper.TabIndex = 4;
@@ -327,7 +327,7 @@
             // 
             // btnSaveSettings
             // 
-            btnSaveSettings.Location = new Point(90, 134);
+            btnSaveSettings.Location = new Point(91, 149);
             btnSaveSettings.Name = "btnSaveSettings";
             btnSaveSettings.Size = new Size(131, 34);
             btnSaveSettings.TabIndex = 3;
@@ -338,7 +338,7 @@
             // lblMonitor
             // 
             lblMonitor.AutoSize = true;
-            lblMonitor.Location = new Point(18, 19);
+            lblMonitor.Location = new Point(25, 22);
             lblMonitor.Name = "lblMonitor";
             lblMonitor.Size = new Size(50, 15);
             lblMonitor.TabIndex = 1;
@@ -347,7 +347,7 @@
             // 
             // btnSetWallpaper
             // 
-            btnSetWallpaper.Location = new Point(36, 91);
+            btnSetWallpaper.Location = new Point(36, 114);
             btnSetWallpaper.Name = "btnSetWallpaper";
             btnSetWallpaper.Size = new Size(121, 31);
             btnSetWallpaper.TabIndex = 2;
@@ -358,7 +358,7 @@
             // cmbMonitors
             // 
             cmbMonitors.FormattingEnabled = true;
-            cmbMonitors.Location = new Point(18, 41);
+            cmbMonitors.Location = new Point(22, 45);
             cmbMonitors.Name = "cmbMonitors";
             cmbMonitors.Size = new Size(278, 23);
             cmbMonitors.TabIndex = 0;
@@ -380,7 +380,6 @@
             // 
             // pbConusGeoColor
             // 
-            pbConusGeoColor.BorderStyle = BorderStyle.FixedSingle;
             pbConusGeoColor.Location = new Point(25, 0);
             pbConusGeoColor.Name = "pbConusGeoColor";
             pbConusGeoColor.Size = new Size(220, 132);
@@ -390,7 +389,6 @@
             // 
             // pbGulfAmerica
             // 
-            pbGulfAmerica.BorderStyle = BorderStyle.FixedSingle;
             pbGulfAmerica.Location = new Point(25, 0);
             pbGulfAmerica.Name = "pbGulfAmerica";
             pbGulfAmerica.Size = new Size(160, 160);
@@ -400,7 +398,6 @@
             // 
             // pbGeoColor
             // 
-            pbGeoColor.BorderStyle = BorderStyle.FixedSingle;
             pbGeoColor.Location = new Point(25, 3);
             pbGeoColor.Name = "pbGeoColor";
             pbGeoColor.Size = new Size(160, 160);
@@ -410,7 +407,6 @@
             // 
             // pbDust
             // 
-            pbDust.BorderStyle = BorderStyle.FixedSingle;
             pbDust.Location = new Point(25, 3);
             pbDust.Name = "pbDust";
             pbDust.Size = new Size(160, 160);
